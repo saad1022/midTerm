@@ -1,24 +1,35 @@
-import React, { Component } from 'react';
-import { Container, Header, Content, Footer, FooterTab, Button, Icon, Text ,Left, Body, Right, Title } from 'native-base';
-export default class FooterTabsIconTextExample extends Component {
+import React, { Component } from "react";
+import { Container, Header, Content, Accordion,Left, Body, Right,Title,Footer, FooterTab, Button, Icon, Text } from "native-base";
+const dataArray = [
+  { title: "Experience", content: "Visual Baisc Developer" },
+  { title: "MCS", content: "Masters in Computer Science" },
+  { title: "B.Com", content: "University Of Karachi" }
+];
+export default class AccordionHeaderContentStyleExample extends Component {
   render() {
     return (
-      <Container>
-
-        <Header >
+     
+     <Container>
+        <Header>
         <Left/>
           <Body>
             <Title>Saad Ali Afandi</Title>
           </Body>
           <Right />
-          </Header>
+        </Header>
 
-        <Content />
+        <Content padder>
+          <Accordion
+            dataArray={dataArray}
+            headerStyle={{ backgroundColor: "#b7daf8" }}
+            contentStyle={{ backgroundColor: "#ddecf8" }}
+          />
+        </Content>
 
         <Footer>
           <FooterTab>
             <Button vertical active>
-              <Text>saadaliafnadi@gmail.com</Text>
+              <Text>saadaliafandi@gmail.com</Text>
             </Button>
             <Button vertical>
               <Icon name="person" />
@@ -26,6 +37,9 @@ export default class FooterTabsIconTextExample extends Component {
             </Button>
           </FooterTab>
         </Footer>
+
+
+
       </Container>
     );
   }
