@@ -5,6 +5,12 @@ const dataArray = [
   { title: "MCS", content: "Masters in Computer Science" },
   { title: "B.Com", content: "University Of Karachi" }
 ];
+
+const dataArray1 = [
+  { title: "First Element", content: "Lorem ipsum dolor sit amet" },
+  { title: "Second Element", content: "Lorem ipsum dolor sit amet" },
+  { title: "Third Element", content: "Lorem ipsum dolor sit amet" }
+];
 export default class AccordionHeaderContentStyleExample extends Component {
   render() {
     return (
@@ -24,7 +30,12 @@ export default class AccordionHeaderContentStyleExample extends Component {
             headerStyle={{ backgroundColor: "#b7daf8" }}
             contentStyle={{ backgroundColor: "#ddecf8" }}
           />
+
+         
+        
         </Content>
+
+        
 
         <Footer>
           <FooterTab>
